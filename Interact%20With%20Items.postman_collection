@@ -1,0 +1,213 @@
+{
+	"id": "adb0bfad-c702-bba9-b3e3-2349a3eaed95",
+	"name": "Interact With Items",
+	"description": "",
+	"order": [
+		"bf41393c-9502-99b4-6a28-198e8835992f",
+		"aabf83b2-266b-66e9-cc3d-1539a78f7b21",
+		"24b7b543-0bfe-c97e-8458-a6fd39aba2fa",
+		"5eaf98a5-4723-12f7-d0cd-8301a7924ba1",
+		"f03aec61-d640-3023-19f1-0fb38ce16a4e",
+		"f4af64ce-b59b-5eea-3cf9-c92da6872f16",
+		"a932172f-937b-f37e-7844-8718d8a72a43",
+		"919e236f-ec24-d5a8-3c9e-fba36f7e8082"
+	],
+	"folders": [],
+	"timestamp": 1464602836852,
+	"owner": "335659",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "24b7b543-0bfe-c97e-8458-a6fd39aba2fa",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer {{token}}\n",
+			"url": "https://{{vra-fqdn}}/catalog-service/api/consumer/resources/{{id}}/actions",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"enabled": true,
+					"type": "text",
+					"value": "original",
+					"key": "size"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1464604548911,
+			"name": "Available Deployment Actions",
+			"description": "",
+			"collectionId": "adb0bfad-c702-bba9-b3e3-2349a3eaed95",
+			"responses": []
+		},
+		{
+			"id": "5eaf98a5-4723-12f7-d0cd-8301a7924ba1",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer {{token}}\n",
+			"url": "https://{{vra-fqdn}}/catalog-service/api/consumer/requests",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1464610783314,
+			"name": "Request a Deployment Action",
+			"description": "",
+			"collectionId": "adb0bfad-c702-bba9-b3e3-2349a3eaed95",
+			"responses": [],
+			"rawModeData": "{\n  \"@type\" : \"ResourceActionRequest\",\n  \"resourceRef\" : {\n    \"id\" : \"{{deploymentId}}\"\n  },\n  \"resourceActionRef\" : {\n    \"id\" : \"{{actionId}}\"\n  },\n  \"organization\" : {\n    \"tenantRef\" : \"vsphere.local\",\n    \"tenantLabel\" : \"vsphere.local\",\n    \"subtenantRef\" : \"29a02ed9-7e63-4c77-8a15-c930afb0e3d8\",\n    \"subtenantLabel\" : \"Development\"\n  },\n  \"state\" : \"SUBMITTED\",\n  \"requestNumber\" : 0,\n  \"requestData\" : {\n    \"entries\" : []\n  }\n}"
+		},
+		{
+			"id": "919e236f-ec24-d5a8-3c9e-fba36f7e8082",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer {{token}}\n",
+			"url": "https://{{vra-fqdn}}/catalog-service/api/consumer/requests",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "adb0bfad-c702-bba9-b3e3-2349a3eaed95",
+			"data": [
+				{
+					"enabled": true,
+					"type": "text",
+					"value": "original",
+					"key": "size"
+				}
+			],
+			"dataMode": "params",
+			"name": "Get Request Status",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1464599256713,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a932172f-937b-f37e-7844-8718d8a72a43",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer {{token}}\n",
+			"url": "https://{{vra-fqdn}}/catalog-service/api/consumer/requests",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1464610771618,
+			"name": "Request a Machine Action",
+			"description": "",
+			"collectionId": "adb0bfad-c702-bba9-b3e3-2349a3eaed95",
+			"responses": [],
+			"rawModeData": "{\n  \"@type\" : \"ResourceActionRequest\",\n  \"resourceRef\" : {\n    \"id\" : \"{{machineId}}\"\n  },\n  \"resourceActionRef\" : {\n    \"id\" : \"{{actionId}}\"\n  },\n  \"organization\" : {\n    \"tenantRef\" : \"vsphere.local\",\n    \"tenantLabel\" : \"vsphere.local\",\n    \"subtenantRef\" : \"29a02ed9-7e63-4c77-8a15-c930afb0e3d8\",\n    \"subtenantLabel\" : \"Development\"\n  },\n  \"state\" : \"SUBMITTED\",\n  \"requestNumber\" : 0,\n  \"requestData\" : {\n    \"entries\" : []\n  }\n}"
+		},
+		{
+			"id": "aabf83b2-266b-66e9-cc3d-1539a78f7b21",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer {{token}}\n",
+			"url": "https://{{vra-fqdn}}/catalog-service/api/consumer/resources/types/composition.resource.type.deployment",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"enabled": true,
+					"type": "text",
+					"value": "original",
+					"key": "size"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1464603891014,
+			"name": "Get Deployments",
+			"description": "",
+			"collectionId": "adb0bfad-c702-bba9-b3e3-2349a3eaed95",
+			"responses": []
+		},
+		{
+			"id": "bf41393c-9502-99b4-6a28-198e8835992f",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "https://{{vra-fqdn}}/identity/api/tokens",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "postman.clearEnvironmentVariable(\"token\");\nvar data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"token\", data.id);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1464602031054,
+			"name": "BG User Login",
+			"description": "",
+			"collectionId": "adb0bfad-c702-bba9-b3e3-2349a3eaed95",
+			"responses": [],
+			"rawModeData": "{\n    \"username\":\"{{bguser}}\",\n    \"password\":\"{{password}}\",\n    \"tenant\":\"{{tenant}}\"\n}\n"
+		},
+		{
+			"id": "f03aec61-d640-3023-19f1-0fb38ce16a4e",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer {{token}}\n",
+			"url": "https://{{vra-fqdn}}/catalog-service/api/consumer/resources?$filter=parentResource eq '{{deploymentId}}'",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"enabled": true,
+					"type": "text",
+					"value": "original",
+					"key": "size"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1464610491514,
+			"name": "Get Machines from Deployment",
+			"description": "",
+			"collectionId": "adb0bfad-c702-bba9-b3e3-2349a3eaed95",
+			"responses": []
+		},
+		{
+			"id": "f4af64ce-b59b-5eea-3cf9-c92da6872f16",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer {{token}}\n",
+			"url": "https://{{vra-fqdn}}/catalog-service/api/consumer/resources/{{machineId}}/actions",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"enabled": true,
+					"type": "text",
+					"value": "original",
+					"key": "size"
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "postman.clearEnvironmentVariable(\"actionId\");\nvar data = JSON.parse(responseBody);\nif (data.name === \"Destroy\") {\n    var actionId = data.id;\n}\npostman.setEnvironmentVariable(\"actionId\", actionId);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1464613885635,
+			"name": "Available Machine Actions",
+			"description": "",
+			"collectionId": "adb0bfad-c702-bba9-b3e3-2349a3eaed95",
+			"responses": []
+		}
+	]
+}
