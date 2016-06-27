@@ -15,23 +15,22 @@
 	"requests": [
 		{
 			"id": "2f634f87-3fc6-e8a6-19f2-69878722f5ee",
-			"headers": "",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer {{token}}\n",
 			"url": "https://{{vra-fqdn}}/identity/api/authorization/tenants/{{tenant}}/principals?hasRole={{role}}",
-			"pathVariables": {},
 			"preRequestScript": null,
+			"pathVariables": {},
 			"method": "GET",
-			"collectionId": "7c042fb2-d9ff-b041-6865-5c683a146606",
 			"data": null,
 			"dataMode": "params",
+			"version": 2,
+			"tests": "\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1467030305398,
 			"name": "Get Users with Role",
 			"description": "",
-			"descriptionFormat": "html",
-			"time": 1467029686598,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
+			"collectionId": "7c042fb2-d9ff-b041-6865-5c683a146606",
+			"responses": []
 		},
 		{
 			"id": "57648235-6b57-88a8-5ebf-beaeb8c44c1c",
