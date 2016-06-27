@@ -1,0 +1,57 @@
+{
+	"id": "7c042fb2-d9ff-b041-6865-5c683a146606",
+	"name": "Get Users with Role",
+	"description": "",
+	"order": [
+		"57648235-6b57-88a8-5ebf-beaeb8c44c1c",
+		"2f634f87-3fc6-e8a6-19f2-69878722f5ee"
+	],
+	"folders": [],
+	"timestamp": 1467029586769,
+	"owner": "335659",
+	"remoteLink": "",
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "2f634f87-3fc6-e8a6-19f2-69878722f5ee",
+			"headers": "",
+			"url": "https://{{vra-fqdn}}/identity/api/authorization/tenants/{{tenant}}/principals?hasRole={{role}}",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "7c042fb2-d9ff-b041-6865-5c683a146606",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get Users with Role",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1467029686598,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "57648235-6b57-88a8-5ebf-beaeb8c44c1c",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"url": "https://{{vra-fqdn}}/identity/api/tokens",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "postman.clearEnvironmentVariable(\"token\");\nvar data = JSON.parse(responseBody);\npostman.setEnvironmentVariable(\"token\", data.id);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1464913647264,
+			"name": "Authenticate Tenant Admin",
+			"description": "",
+			"collectionId": "7c042fb2-d9ff-b041-6865-5c683a146606",
+			"responses": [],
+			"rawModeData": "{\n    \"username\":\"{{tenantadmin}}\",\n    \"password\":\"{{password}}\",\n    \"tenant\":\"{{tenant}}\"\n}\n"
+		}
+	]
+}
